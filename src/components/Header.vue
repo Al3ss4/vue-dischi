@@ -15,11 +15,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/style/utility";
-@import "@/style/general";
+@import '@/style/utility';
 
 .logo {
-  background-color: #2e3a46;
+  background-color: $bg-header;
   height: 80px;
 
   img {
