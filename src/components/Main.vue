@@ -1,11 +1,16 @@
 <template>
 
   <main class="container">
-    <div class="row">
-      <div v-if="element.length > 0 " class="col col-md-6 col-xl-4">
-        <SongItem :singleCd="element[2]" />
+    
+      <div v-if="element.length > 0 " class="row justify-content-center" >
+        <SongItem v-for="song in element " :key="song" :singleCd="song" 
+        class="col col-md-6 col-xl-4 mx-2 "/>
+        
       </div>
-    </div>
+      <div v-else>
+        
+          </div>  
+   
   </main>
 
 </template>
