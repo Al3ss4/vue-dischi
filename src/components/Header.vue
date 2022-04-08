@@ -1,6 +1,10 @@
 <template>
   <div class="container">
-    header
+    <div class="row">
+        <div class="col">
+            <img src="@/assets/logo.png" alt="spotify-logo">
+        </div>
+    </div>
   </div>
 </template>
 
