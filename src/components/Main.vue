@@ -1,11 +1,13 @@
 <template>
-  <div class="container">
+
+  <main class="container">
     <div class="row">
       <div v-if="element.length > 0 " class="col col-md-6 col-xl-4">
-        <SongItem :singleCd="element[0]" />
+        <SongItem :singleCd="element[2]" />
       </div>
     </div>
-  </div>
+  </main>
+
 </template>
 
 <script>
@@ -46,5 +48,9 @@ loadAlbum(){
 </script>
 
 <style lang="scss" scoped>
+@import '@/style/utility';
+main{
+  background-color: $bg-main;
+}
 
 </style>
