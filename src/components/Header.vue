@@ -1,33 +1,29 @@
 <template>
   <div class="container">
     <div class="row logo align-items-center">
-        <div class="col-12">
-            <img src="@/assets/logo.png" alt="spotify-logo">
-        </div>
+      <div class="col-12">
+        <img src="@/assets/logo.png" alt="spotify-logo" />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-name: 'headerComponent',
-}
+  name: "headerComponent",
+};
 </script>
 
 <style lang="scss" scoped>
+@import "@/style/utility";
+@import "@/style/general";
 
-@import '@/style/utility';
-@import '@/style/general';
+.logo {
+  background-color: #2e3a46;
+  height: 80px;
 
-.logo
-{
-    background-color: #2e3a46;
-    height: 100px;
-   
-    img
-    {
-        width: 5%;
-     
-    }
+  img {
+    width: 5%;
+  }
 }
 </style>
