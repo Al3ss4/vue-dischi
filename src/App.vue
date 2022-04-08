@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Main/>
+    <Main :album='urlMusic'/>
   </div>
 </template>
 
@@ -15,6 +15,11 @@ export default {
     Header,
     Main
   },
+  data(){
+    return{
+      urlMusic:'https://flynn.boolean.careers/exercises/api/array/music'
+    }
+  }
 };
 </script>
 
