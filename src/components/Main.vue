@@ -7,9 +7,7 @@
         class="col col-md-6 col-xl-4 mx-2 "/>
         
       </div>
-      <div v-else>
-        
-          </div>  
+      <LoadingSong v-else label="Caricamento"/>
    
   </main>
 
@@ -18,6 +16,7 @@
 <script>
 import axios from 'axios'
 import SongItem from '@/components/SongItem.vue'
+import LoadingSong from '@/components/LoadingSong.vue';
 
 export default {
 name: 'mainComponent',
@@ -30,7 +29,8 @@ props:{
   album: String
 },
 components:{
-  SongItem
+  SongItem,
+  LoadingSong
 },
 mounted(){
   this.loadAlbum();
@@ -42,7 +42,7 @@ loadAlbum(){
       //console.log(response);
       if (response.status === 200){
         this.element = response.data.response;
-        console.log(this.element[0]);
+        //console.log(this.element[0]);
       }
     }
   )
