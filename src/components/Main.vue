@@ -10,6 +10,6 @@ name: 'mainComponent',
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>
