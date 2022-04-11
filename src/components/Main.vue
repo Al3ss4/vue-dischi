@@ -9,7 +9,7 @@
     <div v-if= "!loadElement" class="row justify-content-center">
       <SongItem
         v-for="song in filtGenre "
-        :key="song"
+        :key="song.item"
         :singleCd="song"
         class="col col-md-6 col-xl-4 mx-2"
       />
