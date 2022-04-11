@@ -17,6 +17,7 @@ data(){
 },
 methods:{
     search(){
+        console.log('SearchSong testo', this.genreSong);
         this.$emit('SearchSong', this.genreSong);
     }
 }

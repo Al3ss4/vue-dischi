@@ -2,13 +2,13 @@
   <main class="container">
     <div class="row text-center  ">
       <div class="col mt-4">
-        <SearchSong />
+        <SearchSong @SearchSong ='filterItem'/>
       </div>
     </div>
 
-    <div v-if="element.length > 0" class="row justify-content-center">
+    <div v-if= "!loadElement" class="row justify-content-center">
       <SongItem
-        v-for="song in element"
+        v-for="song in filtGenre "
         :key="song"
         :singleCd="song"
         class="col col-md-6 col-xl-4 mx-2"
@@ -29,10 +29,22 @@ export default {
   data() {
     return {
       element: [],
+      searchList:''
     };
   },
   props: {
     album: String,
+  },
+  computed:{
+    loadElement(){
+      return this.element.length === 0;
+    },
+    filtGenre(){
+      if (this.searchList.length === 0){
+        return this.element
+      }
+      return this.element.filter((item)=> item.genre.toLowerCase().includes(this.searchList.toLowerCase()))
+    }
   },
   components: {
     SongItem,
@@ -52,6 +64,10 @@ export default {
         }
       });
     },
+    filterItem(searchList){
+      this.searchList = searchList;
+      console.log(searchList);
+    }
   },
 };
 </script>
