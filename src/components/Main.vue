@@ -1,6 +1,9 @@
 <template>
 
   <main class="container">
+    <div class="col">
+      <SearchSong />
+    </div>
     
       <div v-if="element.length > 0 " class="row justify-content-center" >
         <SongItem v-for="song in element " :key="song" :singleCd="song" 
@@ -17,6 +20,7 @@
 import axios from 'axios'
 import SongItem from '@/components/SongItem.vue'
 import LoadingSong from '@/components/LoadingSong.vue';
+import SearchSong from '@/components/SearchSong.vue';
 
 export default {
 name: 'mainComponent',
@@ -30,7 +34,8 @@ props:{
 },
 components:{
   SongItem,
-  LoadingSong
+  LoadingSong,
+  SearchSong
 },
 mounted(){
   this.loadAlbum();
