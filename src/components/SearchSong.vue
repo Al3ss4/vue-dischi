@@ -1,5 +1,8 @@
 <template>
-  <div></div>
+  <div>
+      <input type="text" placeholder="Search"/>
+      <button >Search</button>
+  </div>
 </template>
 
 <script>
