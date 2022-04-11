@@ -43,7 +43,7 @@ export default {
       if (this.searchList.length === 0){
         return this.element
       }
-      return this.element.filter((item)=> item.genre.toLowerCase().includes(this.searchList.toLowerCase()))
+      return this.element.filter((item)=> item.genre.toLowerCase().includes(this.searchList.toLowerCase()) || item.author.toLowerCase().includes(this.searchList.toLowerCase()))
     }
   },
   components: {
